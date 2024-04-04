@@ -1,0 +1,20 @@
+name: Shell Script Tests with shunit2
+
+on: [push, pull_request]
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install shunit2
+      run: |
+        git clone https://github.com/kward/shunit2.git
+
+    - name: Run shell script tests
+      run: |
+        chmod +x tests/testing_shell.sh  # Make sure your test scripts are executable
+        ./tests/testing_shell.sh
