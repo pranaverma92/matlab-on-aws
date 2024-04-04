@@ -1,6 +1,6 @@
 name: Shell Script Tests with shunit2
 on:
-  workflow_dispatch:
+  # workflow_dispatch:
   workflow_call:
 
 jobs:
