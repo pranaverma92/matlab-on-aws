@@ -1,6 +1,7 @@
 name: Shell Script Tests with shunit2
 
-on: [push, pull_request]
+on:
+  workflow_dispatch:
 
 jobs:
   run-tests:
@@ -17,4 +18,4 @@ jobs:
     - name: Run shell script tests
       run: |
         chmod +x tests/testing_shell.sh  # Make sure your test scripts are executable
-        ./tests/testing_shell.sh
+        sh ./tests/testing_shell.sh
