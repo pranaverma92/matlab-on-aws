@@ -16,6 +16,10 @@ jobs:
           with:
             ruby-version: '3.1'
 
+        - name: Install shunit2
+          run: |
+              git clone https://github.com/kward/shunit2.git
+
         - name: Install Bashcov
           run: gem install bashcov
 
