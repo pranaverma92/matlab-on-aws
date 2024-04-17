@@ -22,7 +22,8 @@ jobs:
 
         - name: Run shell script tests
           run: |
-            chmod +x tests/testing_shell.sh  # Make sure your test scripts are executable
+            chmod +x tests/testing_shell.sh
+            bashcov tests/testing_shell.sh
 
         - name: Upload reports to Codecov
           uses: codecov/codecov-action@v2
