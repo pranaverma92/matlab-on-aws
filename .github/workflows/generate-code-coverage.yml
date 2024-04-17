@@ -22,7 +22,7 @@ jobs:
 
         - name: Run script
           run: |
-            chmod +x tests/testing_shell.sh  # Make sure your test scripts are executable
+
             bashcov ./tests/testing_shell.sh
 
         - name: Upload reports to Codecov
