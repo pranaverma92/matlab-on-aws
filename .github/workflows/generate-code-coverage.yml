@@ -22,8 +22,8 @@ jobs:
 
         - name: Run script
           run: |
+            chmod +x tests/testing_shell.sh
 
-            bashcov ./tests/testing_shell.sh
 
         - name: Upload reports to Codecov
           uses: codecov/codecov-action@v2
