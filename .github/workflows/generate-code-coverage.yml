@@ -1,33 +1,33 @@
-# Copyright 2020-2023 The MathWorks, Inc.
+# # Copyright 2020-2023 The MathWorks, Inc.
 
-name: Generate Code Coverage XML
-on: [push]
+# name: Generate Code Coverage XML
+# on: [push]
 
-jobs:
-    generate-code-coverage:
-        runs-on: ubuntu-latest
+# jobs:
+#     generate-code-coverage:
+#         runs-on: ubuntu-latest
 
-        steps:
-        - name: Checkout code
-          uses: actions/checkout@v2
+#         steps:
+#         - name: Checkout code
+#           uses: actions/checkout@v2
 
-        - name: Set up Ruby
-          uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
-          with:
-            ruby-version: '3.1'
+#         - name: Set up Ruby
+#           uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
+#           with:
+#             ruby-version: '3.1'
 
-        - name: Install shunit2
-          run: |
-              git clone https://github.com/kward/shunit2.git
+#         - name: Install shunit2
+#           run: |
+#               git clone https://github.com/kward/shunit2.git
 
-        - name: Install Bashcov
-          run: gem install bashcov
+#         - name: Install Bashcov
+#           run: gem install bashcov
 
 
-        - name: Run shell script tests
-          run: |
-            chmod +x tests/testing_shell.sh
-            bashcov tests/testing_shell.sh
+#         - name: Run shell script tests
+#           run: |
+#             chmod +x tests/testing_shell.sh
+#             bashcov tests/testing_shell.sh
 
-        - name: Upload reports to Codecov
-          uses: codecov/codecov-action@v2
+#         - name: Upload reports to Codecov
+#           uses: codecov/codecov-action@v2

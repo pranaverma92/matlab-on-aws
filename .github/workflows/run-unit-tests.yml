@@ -19,5 +19,5 @@ jobs:
       env:
         SHUNIT2_PATH: ${{ github.workspace }}/shunit2/shunit2
       run: |
-        chmod +x tests/testing_shell.sh  # Make sure your test scripts are executable
-        sh ./tests/testing_shell.sh
+        chmod +x tests/test_optional_user_command.sh  # Make sure your test scripts are executable
+        sh ./tests/test_optional_user_command.sh
