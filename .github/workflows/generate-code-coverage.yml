@@ -1,6 +1,5 @@
 # Copyright 2020-2023 The MathWorks, Inc.
 
-# Composite Action to generate Code Coverage XML and Upload it
 name: Generate Code Coverage XML
 on: [push]
 
@@ -9,6 +8,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+
         - name: Set up Ruby
           uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
           with:
@@ -16,6 +18,7 @@ jobs:
 
         - name: Install Bashcov
           run: gem install bashcov
+
 
         - name: Run shell script tests
           run: |
