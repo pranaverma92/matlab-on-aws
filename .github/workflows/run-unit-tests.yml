@@ -16,6 +16,8 @@ jobs:
         git clone https://github.com/kward/shunit2.git
 
     - name: Run shell script tests
+      env:
+        SHUNIT2_PATH: ${{ github.workspace }}/shunit2/shunit2
       run: |
         chmod +x tests/testing_shell.sh  # Make sure your test scripts are executable
         sh ./tests/testing_shell.sh
