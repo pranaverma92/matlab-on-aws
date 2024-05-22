@@ -26,4 +26,4 @@ jobs:
       #   SHUNIT2_PATH: ${{ github.workspace }}/shunit2/shunit2
       working-directory: ${{ github.workspace }}/tests
       run: |
-        bats tests/test-check-profile.bats
+        bats test-check-profile.bats
