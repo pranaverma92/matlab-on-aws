@@ -23,7 +23,7 @@ teardown() {
 
 @test "License MATLAB using Network License Manager" {
   export MLM_LICENSE_FILE="/test/license/file.lic"
-  run bash 70_setup-matlab.sh
+  run bash ../../packer/v1/startup/70_setup-matlab.sh
   echo "output_from_script: $output"
 
   result=$(grep "export MLM_LICENSE_FILE='/test/license/file.lic'" "$MLM_DEF_FILE")

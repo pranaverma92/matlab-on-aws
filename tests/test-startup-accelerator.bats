@@ -18,7 +18,7 @@ teardown() {
 
 @test "MATLAB_ROOT is set and MATLABStartupAccelerator executes" {
   export MATLAB_ROOT
-  run bash 80_warmup-matlab.sh
+  run bash ../packer/v1/startup/80_warmup-matlab.sh
   echo "output:$output"
 
   # Check if MATLABStartupAccelerator was executed and "Warm up done." was echoed
