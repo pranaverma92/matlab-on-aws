@@ -24,6 +24,7 @@ jobs:
     - name: Run shell script unit tests
       # env:
       #   SHUNIT2_PATH: ${{ github.workspace }}/shunit2/shunit2
+      working-directory: tests
       run: |
 
         bats tests/test-check-profile.bats
