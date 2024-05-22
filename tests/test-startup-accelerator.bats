@@ -18,7 +18,7 @@ teardown() {
 
 @test "MATLAB_ROOT is set and MATLABStartupAccelerator executes" {
   export MATLAB_ROOT
-  run bash /mathworks/devel/sandbox/pverma/matlab-aws-linux-fork/matlab-on-aws/tests/80_warmup-matlab.sh
+  run bash 80_warmup-matlab.sh
   echo "output:$output"
 
   # Check if MATLABStartupAccelerator was executed and "Warm up done." was echoed
