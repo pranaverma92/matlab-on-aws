@@ -5,7 +5,7 @@ testMATLAB_ROOTSet() {
 
     # Mock MATLAB_ROOT
 
-    MATLAB_ROOT="/home/pverma/Desktop/testing"
+    MATLAB_ROOT=$(mktemp -d)
     mkdir -p "${MATLAB_ROOT}/bin/glnxa64"
 
     echo '#!/bin/bash' > "${MATLAB_ROOT}/bin/glnxa64/MATLABStartupAccelerator"
@@ -20,6 +20,7 @@ testMATLAB_ROOTSet() {
 
     # Assert the expected output
     assertEquals "Error" "$expectedOutput" "$output"
+    rm -rf "$MATLAB_ROOT"
 }
 
 # Test when MATLAB_ROOT is unset
